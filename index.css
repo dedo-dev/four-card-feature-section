@@ -74,5 +74,27 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+/* ------ CUSTOM PROPERTIES ------ */
+/* @property --primary-red {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: red;
+} */
+
+:root {
+    /* Colors */
+    /* Neutral */
+    --clr-neutral-100: hsl(0, 0%, 98%);
+    --clr-neutral-400: hsl(229, 6%, 66%);
+    --clr-neutral-800: hsl(234, 12%, 34%);
+    /* Primary */
+    --clr-primary
+}
+
+body {
+    --primary-red: green;
+    background: var(--primary-red);
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
