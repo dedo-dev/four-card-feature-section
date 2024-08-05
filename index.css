@@ -1,5 +1,6 @@
 /* ------ CSS RESET ------ */
 /* Full CSS Reset (https://piccalil.li/blog/a-more-modern-css-reset/) by Andy Bell */
+
 /* Box sizing rules */
 *,
 *::before,
@@ -99,6 +100,7 @@ textarea:not([rows]) {
   --lh-bodyTxt: 1.7; /* 25 */
   --lh-heading: 1.5; /* auto */
   --lh-cardTxt: 1.77; /* 23 */
+
   /* Layout */
   --clr-bodyBG: hsl(0, 0%, 98%);
   --clr-bodyH1: hsl(234, 12%, 34%);
@@ -113,6 +115,7 @@ textarea:not([rows]) {
   --clr-shadow: hsla(213, 47%, 67%, 50%);
 
   /* Spacing */
+  --gap-cardWrapper: clamp(1.5rem, 1.3929rem + 0.5357vw, 1.875rem);
 
 }
 
@@ -130,13 +133,13 @@ body {
 
 .hero {
   container: hero / inline-size;
-  margin-block-start: 85px;
 }
 
 .hero__heading-wrapper {
   text-align: center;
-  margin-inline: auto;
   max-width: 55ch;
+  margin-block-start: 5.3125rem;
+  margin-inline: auto;
 }
 
 .hero__heading {
@@ -158,10 +161,10 @@ body {
 
 .service-card-wrapper {
   display: grid;
-  gap: 1.5rem;
-  /* place-items: center; */
+  gap: var(--gap-cardWrapper);
+  place-items: center;
   max-width: 69.375rem;
-  margin-block-start: 4.75rem;
+  margin-block: 4.75rem 4.875rem;
   margin-inline: auto;
 }
 
@@ -173,35 +176,8 @@ body {
   background: var(--clr-cardBG);
   max-width: 21.875rem;
   padding: 1.86em;
-  /* border-block-start: 3px solid black; */
   border-radius: .5rem;
   box-shadow: 0 .9375rem 1.875rem -.6875rem var(--clr-shadow);
-}
-
-.br-top {
-  --_br: var(--br, black);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 3px;
-  width: 100%;
-  background: var(--_br);
-}
-
-.br-top--supervisor {
-  --br: var(--clr-borderTwo)
-}
-
-.br-top--team-builder {
-  --br: var(--clr-borderOne);
-}
-
-.br-top--karma {
-  --br: var(--clr-borderThree);
-}
-
-.br-top--calculator {
-  --br: var(--clr-borderFour);
 }
 
 .service-card__heading {
@@ -235,19 +211,24 @@ body {
   text-underline-offset: .125rem;
 }
 
-@container hero (width > 600px) {
+@container hero (width > 37.5em) {
   .service-card-wrapper {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@container hero (width > 900px) {
+@container hero (width > 56.25em) {
+  .hero__heading-wrapper {
+    margin-block-start: 5rem;
+  }
+
   .service-card-wrapper {
     grid-template-areas:
-    ". t  ."
-    "l t  r"
-    "l b  r"
-    ". b  .";
+    ". t ."
+    "l t r"
+    "l b r"
+    ". b .";
+    margin-block: 4rem 5rem;
   }
 
   .service-card--supervisor {
@@ -265,5 +246,31 @@ body {
   .service-card--calculator {
     grid-area: r;
   }
+}
 
+/* ------ UTILITY ------ */
+.br-top {
+  --_br: var(--br, black);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--_br);
+}
+
+.br-top--supervisor {
+  --br: var(--clr-borderTwo)
+}
+
+.br-top--team-builder {
+  --br: var(--clr-borderOne);
+}
+
+.br-top--karma {
+  --br: var(--clr-borderThree);
+}
+
+.br-top--calculator {
+  --br: var(--clr-borderFour);
 }
