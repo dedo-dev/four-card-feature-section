@@ -75,19 +75,34 @@ textarea:not([rows]) {
 }
 
 /* ------ CUSTOM PROPERTIES ------ */
-/* @property --primary-red {
-    syntax: "<color>";
-    inherits: false;
-    initial-value: red;
-} */
-
 :root {
   /* Typography */
   --ff-body: 'Poppins', sans-serif;
 
+  --fs-bodyH1: clamp(1.5rem, 1.29rem + 1.07vi, 2.25rem); /* 24 to 36 */
+  --fs-bodyTxt: .9375rem; /* 15 */
+  --fs-cardHeading: 1.25rem; /* 20 */
+  --fs-cardTxt: .8125rem; /* 13 */
+  --fs-attribution: clamp(0.75rem, 0.7rem + 0.27vi, 0.94rem); /* 12 to 15*/
+
+  --fw-bodyH1: 200; /* extraLight */
+  --fw-bodyH1accent: 600; /* semiBold */
+  --fw-bodyTxt: 400; /* regular */
+  --fw-cardHeading: 600; /* semiBold */
+  --fw-cardTxt: 400; /* regular */
+
+  --ls-bodyH1Mobile: .010625rem; /* 0.17 */
+  --ls-bodyH1Desk: .015625rem; /* 0.25 */
+  --ls-bodyTxt: .00625rem; /* 0.1 */
+  --ls-cardTxt: .005625rem; /* 0.09 */
+
+  --lh-bodyTxt: 1.5625rem; /* 25 */
+  --lh-cardTxt: 1.4375rem; /* 23 */
+
   /* Layout */
+  --GrayishBlue: hsl(229, 6%, 66%);
   --clr-bodyBG: hsl(0, 0%, 98%);
-  --clr-bodyHeading: hsl(234, 12%, 34%);
+  --clr-bodyH1: hsl(234, 12%, 34%);
   --clr-bodyTxt: hsl(234, 12%, 34%);
   --clr-cardBG: hsl(0, 0%, 100%);
   --clr-cardHeading: hsl(234, 12%, 34%);
@@ -96,10 +111,14 @@ textarea:not([rows]) {
   --clr-borderTwo: hsl(180, 62%, 55%);
   --clr-borderThree: hsl(34, 97%, 64%);
   --clr-borderFour: hsl(212, 86%, 64%);
+
+  /* Spacing */
+
 }
 
 body {
   font-family: var(--ff-body);
+  margin-inline: 2rem;
 }
 
 .attribution { font-size: 11px; text-align: center; }
