@@ -142,7 +142,7 @@ body {
   color: var(--clr-bodyH1);
   font-size: var(--fs-bodyH1);
   font-weight: var(--fw-bodyH1);
-  line-height: var(--lh-heading); /* mobile version create a variable */
+  line-height: var(--lh-heading);
   letter-spacing: var(--ls-bodyH1Mobile);
   margin: 0;
 }
@@ -158,7 +158,9 @@ body {
 .service-card-wrapper {
   display: grid;
   gap: 1.5rem;
+  max-width: 69.375rem;
   margin-block-start: 4.75rem;
+  margin-inline: auto;
 }
 
 .service-card {
@@ -167,23 +169,56 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--clr-cardBG);
+  max-width: 21.875rem;
   padding: 1.86em;
   /* border-block-start: 3px solid black; */
   border-radius: .5rem;
+}
+
+.br-top {
+  --_br: var(--br, black);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--_br);
+}
+
+.br-top--supervisor {
+  --br: var(--clr-borderTwo)
+}
+
+.br-top--team-builder {
+  --br: var(--clr-borderOne);
+}
+
+.br-top--karma {
+  --br: var(--clr-borderThree);
+}
+
+.br-top--calculator {
+  --br: var(--clr-borderFour);
+}
+
+.service-card__heading {
+  color: var(--clr-cardHeading);
+  font-size: var(--fs-cardHeading);
+  font-weight: var(--fw-cardHeading);
+  line-height: var(--lh-heading);
+  margin: 0;
+}
+
+.service-card__desc {
+  font-size: var(--fs-cardTxt);
+  letter-spacing: var(--ls-cardTxt);
+  margin-block: .25rem 2.0625rem;
 }
 
 svg {
   margin-inline-start: auto;
 }
 
-.bd-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 3px;
-  width: 100%;
-  background: rebeccapurple;
-}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
