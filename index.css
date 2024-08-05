@@ -96,14 +96,13 @@ textarea:not([rows]) {
   --ls-bodyTxt: .00625rem; /* 0.1 */
   --ls-cardTxt: .005625rem; /* 0.09 */
 
-  --lh-bodyTxt: 1.5625rem; /* 25 */
-  --lh-cardTxt: 1.4375rem; /* 23 */
-
+  --lh-bodyTxt: 1.7; /* 25 */
+  --lh-heading: 1.5; /* auto */
+  --lh-cardTxt: 1.77; /* 23 */
   /* Layout */
-  --GrayishBlue: hsl(229, 6%, 66%);
   --clr-bodyBG: hsl(0, 0%, 98%);
   --clr-bodyH1: hsl(234, 12%, 34%);
-  --clr-bodyTxt: hsl(234, 12%, 34%);
+  --clr-bodyTxt: hsl(229, 6%, 66%);
   --clr-cardBG: hsl(0, 0%, 100%);
   --clr-cardHeading: hsl(234, 12%, 34%);
   --clr-cardTxt: hsl(234, 12%, 34%);
@@ -117,6 +116,8 @@ textarea:not([rows]) {
 }
 
 body {
+  background: var(--clr-bodyBG);
+  color: var(--clr-bodyTxt);
   font-family: var(--ff-body);
   font-size: var(--fs-bodyTxt);
   font-weight: var(--fw-bodyTxt);
@@ -127,8 +128,33 @@ body {
 }
 
 .hero {
+  container: hero / inline-size;
   margin-block-start: 85px;
 }
+
+.hero__heading-wrapper {
+  text-align: center;
+  margin-inline: auto;
+  max-width: 55ch;
+}
+
+.hero__heading {
+  color: var(--clr-bodyH1);
+  font-size: var(--fs-bodyH1);
+  font-weight: var(--fw-bodyH1);
+  line-height: var(--lh-heading); /* mobile version create a variable */
+  letter-spacing: var(--ls-bodyH1Mobile);
+  margin: 0;
+}
+
+.hero__heading--accent {
+  font-weight: var(--fw-bodyH1accent);
+}
+
+.hero__desc {
+  margin-block-start: 1rem;
+}
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
