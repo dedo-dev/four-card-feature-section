@@ -155,6 +155,35 @@ body {
   margin-block-start: 1rem;
 }
 
+.service-card-wrapper {
+  display: grid;
+  gap: 1.5rem;
+  margin-block-start: 4.75rem;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--clr-cardBG);
+  padding: 1.86em;
+  /* border-block-start: 3px solid black; */
+  border-radius: .5rem;
+}
+
+svg {
+  margin-inline-start: auto;
+}
+
+.bd-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: rebeccapurple;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
