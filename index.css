@@ -82,18 +82,24 @@ textarea:not([rows]) {
 } */
 
 :root {
-    /* Colors */
-    /* Neutral */
-    --clr-neutral-100: hsl(0, 0%, 98%);
-    --clr-neutral-400: hsl(229, 6%, 66%);
-    --clr-neutral-800: hsl(234, 12%, 34%);
-    /* Primary */
-    --clr-primary
+  /* Typography */
+  --ff-body: 'Poppins', sans-serif;
+
+  /* Layout */
+  --clr-bodyBG: hsl(0, 0%, 98%);
+  --clr-bodyHeading: hsl(234, 12%, 34%);
+  --clr-bodyTxt: hsl(234, 12%, 34%);
+  --clr-cardBG: hsl(0, 0%, 100%);
+  --clr-cardHeading: hsl(234, 12%, 34%);
+  --clr-cardTxt: hsl(234, 12%, 34%);
+  --clr-borderOne: hsl(0, 78%, 62%);
+  --clr-borderTwo: hsl(180, 62%, 55%);
+  --clr-borderThree: hsl(34, 97%, 64%);
+  --clr-borderFour: hsl(212, 86%, 64%);
 }
 
 body {
-    --primary-red: green;
-    background: var(--primary-red);
+  font-family: var(--ff-body);
 }
 
 .attribution { font-size: 11px; text-align: center; }
