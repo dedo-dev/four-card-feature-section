@@ -182,12 +182,17 @@ body {
   }
 
   .service-card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
     ". t ."
     "l t r"
     "l b r"
     ". b .";
     margin-block: 4rem 5rem;
+  }
+
+  .service-card {
+    padding: 2.13em;
   }
 
   .service-card--supervisor {
