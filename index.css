@@ -110,6 +110,7 @@ textarea:not([rows]) {
   --clr-borderTwo: hsl(180, 62%, 55%);
   --clr-borderThree: hsl(34, 97%, 64%);
   --clr-borderFour: hsl(212, 86%, 64%);
+  --clr-shadow: hsla(213, 47%, 67%, 50%);
 
   /* Spacing */
 
@@ -173,6 +174,7 @@ body {
   padding: 1.86em;
   /* border-block-start: 3px solid black; */
   border-radius: .5rem;
+  box-shadow: 0 .9375rem 1.875rem -.6875rem var(--clr-shadow);
 }
 
 .br-top {
@@ -215,7 +217,7 @@ body {
   margin-block: .25rem 2.0625rem;
 }
 
-svg {
+.service-card__icon {
   margin-inline-start: auto;
 }
 
