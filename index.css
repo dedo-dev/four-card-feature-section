@@ -159,6 +159,7 @@ body {
 .service-card-wrapper {
   display: grid;
   gap: 1.5rem;
+  /* place-items: center; */
   max-width: 69.375rem;
   margin-block-start: 4.75rem;
   margin-inline: auto;
@@ -232,4 +233,37 @@ body {
   font-weight: 600;
   text-decoration: .125rem underline var(--clr-bodyTxt);
   text-underline-offset: .125rem;
+}
+
+@container hero (width > 600px) {
+  .service-card-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@container hero (width > 900px) {
+  .service-card-wrapper {
+    grid-template-areas:
+    ". t  ."
+    "l t  r"
+    "l b  r"
+    ". b  .";
+  }
+
+  .service-card--supervisor {
+    grid-area: l;
+  }
+
+  .service-card--team-builder {
+    grid-area: t;
+  }
+
+  .service-card--karma {
+    grid-area: b;
+  }
+
+  .service-card--calculator {
+    grid-area: r;
+  }
+
 }
