@@ -222,5 +222,14 @@ body {
 }
 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: var(--fs-attribution);
+  text-align: center;
+}
+
+.attribution a {
+  color: #222;
+  font-weight: 600;
+  text-decoration: .125rem underline var(--clr-bodyTxt);
+  text-underline-offset: .125rem;
+}
