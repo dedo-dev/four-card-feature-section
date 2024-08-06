@@ -182,12 +182,7 @@ body {
   }
 
   .service-card-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-    ". t ."
-    "l t r"
-    "l b r"
-    ". b .";
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
     margin-block: 4rem 5rem;
   }
 
@@ -196,19 +191,23 @@ body {
   }
 
   .service-card--supervisor {
-    grid-area: l;
+    grid-column: 1;
+    grid-row: span 2;
   }
 
   .service-card--team-builder {
-    grid-area: t;
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .service-card--karma {
-    grid-area: b;
+    grid-column: 2;
+    grid-row: 2;
   }
 
   .service-card--calculator {
-    grid-area: r;
+    grid-column: 3;
+    grid-row: span 2;
   }
 }
 
