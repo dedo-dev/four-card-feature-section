@@ -25,14 +25,14 @@ Users should be able to:
 ### Screenshot
 
 ### Mobile Version
-![](/images/mobile-version.png)
+![](./images/mobile-version.png)
 
 ### Desktop Version
-![](/images/desktop-version.png)
+![](./images/desktop-version.png)
 
 ### Links
 
-- Solution URL: [Frontend Mentor solution](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor solution](https://www.frontendmentor.io/solutions/responsive-four-card-feature-using-css-grid-hgYwRLVXHV)
 - Live Site URL: [Demo](https://dz-four-card-feature-section.vercel.app/)
 
 ## My process
